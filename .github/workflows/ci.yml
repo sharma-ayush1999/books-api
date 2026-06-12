@@ -17,13 +17,13 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.25"
+          go-version: "1.25.0"
 
       - name: Build
-        run: go build ./..
+        run: go build ./...
 
       - name: Vet
-        run: go vet ./..
+        run: go vet ./...
 
   docker:
     needs: build-and-test
@@ -47,4 +47,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME}}/books-api:latest
-            ${{ secrets.DOCKERHUB_TOKEN }}/books-api:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/books-api:${{ github.sha }}
