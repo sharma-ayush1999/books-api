@@ -503,3 +503,4 @@ kubectl delete -f k8s/      # delete all K8s resources
 minikube stop               # pause the cluster
 minikube delete             # delete the cluster entirely
 ```
+# test
