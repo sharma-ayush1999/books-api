@@ -52,5 +52,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USER }}/books-api:latest
-            ${{ secrets.DOCKER_USER }}/books-api:${{ github.sha }}
+            ${{ env.DOCKER_USER }}/books-api:latest
+            ${{ env.DOCKER_USER }}/books-api:${{ github.sha }}
