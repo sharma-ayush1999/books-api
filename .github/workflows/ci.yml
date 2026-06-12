@@ -52,5 +52,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/books-api:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/books-api:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USER }}/books-api:latest
+            ${{ secrets.DOCKERHUB_USER }}/books-api:${{ github.sha }}
